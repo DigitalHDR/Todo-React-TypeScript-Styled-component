@@ -1,7 +1,10 @@
 import * as C from './styles'
+import { Item } from '../../types/item'
 
-export const ListItem = () => {
-  return (
-    <C.Container>hello world</C.Container>
-  )
+type Props = {
+  item: Item
+}
+
+export const ListItem = ({ item }: Props) => {
+  return <C.Container>{item.name}</C.Container>
 }
